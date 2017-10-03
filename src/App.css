@@ -1,0 +1,10 @@
+.App{
+  font-size: 1.25em;
+  padding: 15px;
+}
+.rounded-circle{
+  border-radius: 50%;
+}
+.top-justify{
+  padding-top: 3em;
+}
