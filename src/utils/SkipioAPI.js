@@ -7,6 +7,7 @@ const getHeaders = {
 }
 
 const postHeaders = {
+  'Accept': 'application/json',
   'Content-Type': 'application/json'
 }
 
@@ -29,6 +30,10 @@ export const sendMessage = (message, id) => {
       'body': `${message}`
     }
   }
-  fetch(`${apiURL}/api/v2/messages?token=${apiToken}`, { method: 'POST', body: JSON.stringify(data), postHeaders })
-    .then(res => res.status)
+  console.log(JSON.stringify(data))
+  fetch(`${apiURL}/api/v2/messages?token=${apiToken}`, { 
+    method: 'POST',
+    postHeaders, 
+    body: JSON.stringify(data) 
+  }).then(res => res.json())
 }
