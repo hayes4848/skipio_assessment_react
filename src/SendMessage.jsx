@@ -14,6 +14,7 @@ class SendMessage extends Component {
   submitMessage(event){
     event.preventDefault()
     SkipioAPI.sendMessage(this.state.value, this.state.id)
+    this.props.history.push("/")
   }
 
   handleChange(event) {
